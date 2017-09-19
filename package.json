@@ -1,0 +1,42 @@
+{
+  "name": "compare-the-test-frameworks",
+  "version": "1.0.0",
+  "description": "a compare for some javascript test frameworks, include jest, tape, mocha...some other frameworks will continue to add.",
+  "main": "index.js",
+  "scripts": {
+    "jest": "NODE_ENV=test NODE_PATH=./ jest",
+    "mocha": "NODE_ENV=test NODE_PATH=./ mocha --opts mocha.opts __tests__/**.mocha.js",
+    "tape": "NODE_PATH=./ babel-tape-runner __tests__/**.tape.js | tap-spec",
+    "tap": "NODE_ENV=test NODE_PATH=./ tap __tests__/**.tap.js"
+  },
+  "engines": {
+    "node": ">=5.0.0"
+  },
+  "keywords": [
+    "test",
+    "javascript",
+    "frameworks"
+  ],
+  "author": "tobeyouth",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.0.2",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-node6": "^11.0.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "jest": "^21.1.0",
+    "regenerator-runtime": "^0.11.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.8.0"
+  },
+  "dependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-tap": "^5.0.0",
+    "babel-tape-runner": "^2.0.1",
+    "chai": "^4.1.2",
+    "mocha": "2.5.3",
+    "tap": "^10.7.2"
+  }
+}
