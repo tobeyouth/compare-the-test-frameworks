@@ -14,7 +14,8 @@ let r = 3
 
 
 test('tape:sum', (t) => {
-  
+  t.plan(3)
+
   promiseSum(a, b).then((res) => {
     t.equal(res, r, 'promise equal')
   })
@@ -24,11 +25,9 @@ test('tape:sum', (t) => {
   t.equal(trick.value, r, 'generator equal')
 
   t.equal(sum(a, b), r, 'common equal') 
-  
-  t.end()
 })
 
 test('tape:after', (t) => {
+  t.plan(1)
   t.equal(a, 1, 'coust equal')
-  t.end()
 })

@@ -7,7 +7,7 @@
     "jest": "NODE_ENV=test NODE_PATH=./ jest",
     "mocha": "NODE_ENV=test NODE_PATH=./ mocha --opts mocha.opts __tests__/**.mocha.js",
     "tape": "NODE_PATH=./ babel-tape-runner __tests__/**.tape.js | tap-spec",
-    "tap": "NODE_ENV=test NODE_PATH=./ tap __tests__/**.tap.js"
+    "ava": "NODE_ENV=test NODE_PATH=./ ava -t --colors | tap-nyan"
   },
   "engines": {
     "node": ">=5.0.0"
@@ -20,6 +20,7 @@
   "author": "tobeyouth",
   "license": "MIT",
   "devDependencies": {
+    "ava": "^0.22.0",
     "babel-core": "^6.26.0",
     "babel-jest": "^21.0.2",
     "babel-plugin-transform-regenerator": "^6.26.0",
@@ -28,6 +29,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "jest": "^21.1.0",
     "regenerator-runtime": "^0.11.0",
+    "tap-nyan": "^1.1.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.8.0"
   },
@@ -38,5 +40,14 @@
     "chai": "^4.1.2",
     "mocha": "2.5.3",
     "tap": "^10.7.2"
+  },
+  "ava": {
+    "files": [
+      "__tests__/**.ava.js"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
   }
 }
